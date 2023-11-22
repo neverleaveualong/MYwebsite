@@ -115,6 +115,22 @@
             color: #008080; /* 청록색으로 변경 */
             text-decoration: underline; /* 밑줄 추가 */
         }
+
+@media (max-width: 768px) {
+    /* 768px 미만의 화면에서 적용되는 스타일 */
+    .main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* 세로 방향의 Flexbox 레이아웃으로 변경 */
+    align-items: center; /* 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.profile-image {
+    width: 270px; /* 원하는 크기로 조절 */
+    margin-bottom: 20px; /* 이미지와 본문 간격 조절 */
+}
+}
         
         .main-text {
             flex: 1; /* 남은 공간을 채우도록 설정 */
