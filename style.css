@@ -127,7 +127,8 @@
 }
 
 .profile-image {
-    width: 270px; /* 원하는 크기로 조절 */
+    width: 200px; /* 원하는 크기로 조절 */
+	margin-left:20px;
     margin-bottom: 20px; /* 이미지와 본문 간격 조절 */
 }
 }
