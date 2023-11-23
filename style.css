@@ -56,6 +56,7 @@ header {
 
     nav a {
         text-align: center;
+	align-items: center;
         width: 100%;
         padding: 10px;
         margin: 0;
