@@ -19,6 +19,49 @@
             transition: background-color 0.3s, color 0.3s; /* 색상 전환 효과를 부드럽게 적용 */
         }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    order: -1;
+    margin-right: 20px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    /* Existing styles for smaller screens */
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-right: 0;
+    }
+
+    nav a {
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        color: black; /* Add this line to ensure text color is black */
+        text-decoration: none; /* Add this line to remove any underline */
+    }
+}
         .logo {
     		
     		font-size: 1.2em;
@@ -111,11 +154,6 @@
             margin-left: 250px; /* 오른쪽으로 4cm 이동 */
         }
 
-		.main-text a {
-            color: #008080; /* 청록색으로 변경 */
-            text-decoration: underline; /* 밑줄 추가 */
-        }
-
 @media (max-width: 768px) {
     /* 768px 미만의 화면에서 적용되는 스타일 */
     .main-content {
@@ -132,6 +170,11 @@
     margin-bottom: 20px; /* 이미지와 본문 간격 조절 */
 }
 }
+
+		.main-text a {
+            color: #008080; /* 청록색으로 변경 */
+            text-decoration: underline; /* 밑줄 추가 */
+        }
         
         .main-text {
             flex: 1; /* 남은 공간을 채우도록 설정 */
