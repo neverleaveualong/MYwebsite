@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'YClover-Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
@@ -7,33 +6,32 @@
 }
 
 .title {
-	font-family: 'YClover-Bold';
-	font-weight: bold;
-	font-size: 30px;
+    font-family: 'YClover-Bold';
+    font-weight: bold;
+    font-size: 30px;
 }
-
 
 #main-header {
     font-family: 'YClover-Bold';
 }
 
 #home-content {
-	font-family: 'YClover-Bold';
+    font-family: 'YClover-Bold';
 }
 
 header {
-	font-family: 'JalnanGothic';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #FFFFFF;
-        color: black;
-        padding: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: background-color 0.3s, color 0.3s; /* 색상 전환 효과를 부드럽게 적용 */
+    font-family: 'JalnanGothic';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s; /* 색상 전환 효과를 부드럽게 적용 */
 }
 
 .menu-toggle {
@@ -44,15 +42,12 @@ header {
     margin-right: 20px;
 }
 
-
-
-
 @media (max-width: 768px) {
     /* Existing styles for smaller screens */
 
     nav {
         display: none;
-	align-items: center;
+        align-items: center;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -73,7 +68,7 @@ header {
 
     nav a {
         text-align: center;
-	align-items: center;
+        align-items: center;
         width: 100%;
         padding: 10px;
         margin: 0;
@@ -81,17 +76,17 @@ header {
         text-decoration: none; /* Add this line to remove any underline */
     }
 }
-        .logo {
-    		
-    		font-size: 1.2em;
-   			margin-left: 20.8px; /* 1cm 만큼 오른쪽으로 이동 */
-			color: #000000;
-		}
 
-		.fa-4x {
+.logo {
+    font-size: 1.2em;
+    margin-left: 20.8px; /* 1cm 만큼 오른쪽으로 이동 */
+    color: #000000;
+}
+
+.fa-4x {
     text-align: center;
     margin: auto;
-			text-decoration: none; /* 링크에 대한 밑줄을 없앰 */
+    text-decoration: none; /* 링크에 대한 밑줄을 없앰 */
     color: black; /* 기본 텍스트 색상으로 유지 */
 }
 
@@ -108,164 +103,157 @@ header {
     font-size: 1.6rem; /* 크기를 조절하세요 */
     display: inline-block; /* 인라인 요소로 만들어 가로 정렬이 가능하도록 함 */
 }
-        nav {
-            margin-left: auto; /* 우측으로 이동 */
-			
-        }
-		.github-link {
-    		display: inline-block;
-    		margin-top: 10px;
-    		color: black; /* 아이콘 색상 설정 */
-    		text-decoration: none; /* 링크 밑줄 제거 */
+
+nav {
+    margin-left: auto; /* 우측으로 이동 */
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: black; /* 아이콘 색상 설정 */
+    text-decoration: none; /* 링크 밑줄 제거 */
 
     /* 추가적인 스타일 조정 가능 */
-		}
+}
 
-		.github-link:hover {
-   		 color: black; /* 호버 시 아이콘 색상 변경 */
-		}
+.github-link:hover {
+    color: black; /* 호버 시 아이콘 색상 변경 */
+}
 
-        nav a {
-            color: black;
-            text-decoration: none;
-            padding: 10px;
-            margin: 0 4px;
-        }
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 4px;
+}
 
-        nav a:hover {
-    		
-    		font-weight: bold; /* 호버 시 볼드체로 변경 */
-		}
+nav a:hover {
+    font-weight: bold; /* 호버 시 볼드체로 변경 */
+}
 
-        .search-box {
-            display: flex;
-            align-items: center;
-        }
+.search-box {
+    display: flex;
+    align-items: center;
+}
 
-        
-		
+.search-icon {
+    font-size: 1.2em;
+    color: white;
+    margin-right: 50px;
+    cursor: pointer;
+}
 
-        .search-icon {
-            font-size: 1.2em;
-            color: white;
-            margin-right: 50px;
-            cursor: pointer;
-        }
-		
-		.logo a {
-    		
-    		color: black;
-			text-decoration:none;
-		}
+.logo a {
+    color: black;
+    text-decoration: none;
+}
 
-		.main-content {
-            padding: 20px;
-            display: flex;
-			margin-top: 110px;
-            align-items: flex-start
-        }
+.main-content {
+    padding: 20px;
+    display: flex;
+    margin-top: 110px;
+    align-items: flex-start;
+}
 
-        .profile-image {
-            
-            width: 270px; /* 원하는 크기로 조절 */
-            margin-right: 40px; /* 이미지와 본문 간격 조절 */
-            margin-top: 20px;
-            margin-left: 250px; /* 오른쪽으로 4cm 이동 */
-        }
+.profile-image {
+    width: 270px; /* 원하는 크기로 조절 */
+    margin-right: 40px; /* 이미지와 본문 간격 조절 */
+    margin-top: 20px;
+    margin-left: 250px; /* 오른쪽으로 4cm 이동 */
+}
 
 @media (max-width: 768px) {
     /* 768px 미만의 화면에서 적용되는 스타일 */
     .main-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column; /* 세로 방향의 Flexbox 레이아웃으로 변경 */
-    align-items: center; /* 가운데 정렬 */
-    text-align: center; /* 텍스트 가운데 정렬 */
+        padding: 20px;
+        display: flex;
+        flex-direction: column; /* 세로 방향의 Flexbox 레이아웃으로 변경 */
+        align-items: center; /* 가운데 정렬 */
+        text-align: center; /* 텍스트 가운데 정렬 */
+    }
+
+    .profile-image {
+        width: 200px; /* 원하는 크기로 조절 */
+        margin-left: 20px;
+        margin-bottom: 20px; /* 이미지와 본문 간격 조절 */
+    }
 }
 
-.profile-image {
-    width: 200px; /* 원하는 크기로 조절 */
-	margin-left:20px;
-    margin-bottom: 20px; /* 이미지와 본문 간격 조절 */
-}
+.main-text a {
+    color: #008080; /* 청록색으로 변경 */
+    text-decoration: underline; /* 밑줄 추가 */
 }
 
-		.main-text a {
-            color: #008080; /* 청록색으로 변경 */
-            text-decoration: underline; /* 밑줄 추가 */
-        }
-        
-        .main-text {
-            flex: 1; /* 남은 공간을 채우도록 설정 */
-		}
+.main-text {
+    flex: 1; /* 남은 공간을 채우도록 설정 */
+}
 
-		.contact-info {
-            font-size: 0.7em; /* 작은 글꼴 크기 설정 */
-            color: #555; /* 회색 텍스트 색상 설정 */
-            margin-top: 70px; /* 위쪽 여백 추가 */
-			
-			text-align: center;
-        }
-		
-		.section-content {
-    		display: none;
-		}
+.contact-info {
+    font-size: 0.7em; /* 작은 글꼴 크기 설정 */
+    color: #555; /* 회색 텍스트 색상 설정 */
+    margin-top: 70px; /* 위쪽 여백 추가 */
+    text-align: center;
+}
 
-		.section-content.show {
-    		display: block;
-		}
-		#projects-content{
-    		text-align: center;
-		}
+.section-content {
+    display: none;
+}
 
-		#projects-content h2{
-    		font-size: 2em;
-	 		margin-top: 180px;
-		}
+.section-content.show {
+    display: block;
+}
 
-		#projects-content ul {
-    		list-style-type: none;
-    		padding: 0;
-		}
+#projects-content {
+    text-align: center;
+}
 
-		#projects-content li {
-    		margin-bottom: 10px;
-		}
+#projects-content h2 {
+    font-size: 2em;
+    margin-top: 180px;
+}
 
-		#publications-content {
-    		text-align: center;
-		}
+#projects-content ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-		#publications-content h2{
-    		font-size: 2em;
-	 		margin-top: 180px;
-		}
+#projects-content li {
+    margin-bottom: 10px;
+}
 
-		#publications-content ul {
-    		list-style-type: none;
-    		padding: 0;
-		}
+#publications-content {
+    text-align: center;
+}
 
-		#publications-content li {
-    		margin-bottom: 10px;
-		}
+#publications-content h2 {
+    font-size: 2em;
+    margin-top: 180px;
+}
 
-		#activities-content {
-    		text-align: center;
-		}
+#publications-content ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-		#activities-content h2 {
-    	font-size: 2em;
-	 	margin-top: 180px;
-		}
+#publications-content li {
+    margin-bottom: 10px;
+}
 
-		#activities-content ul {
-    		list-style-type: none;
-    		padding: 0;
-		}
+#activities-content {
+    text-align: center;
+}
 
-		#activities-content li {
-    		margin-bottom: 10px;
-		}
+#activities-content h2 {
+    font-size: 2em;
+    margin-top: 180px;
+}
 
+#activities-content ul {
+    list-style-type: none;
+    padding: 0;
+}
 
+#activities-content li {
+    margin-bottom: 10px;
+}
