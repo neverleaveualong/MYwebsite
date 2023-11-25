@@ -1,22 +1,18 @@
-@font-face {
-    font-family: 'YClover-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Lato:wght@300&display=swap');
 
 .title {
-    font-family: 'YClover-Bold';
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 30px;
 }
 
 #main-header {
-    font-family: 'YClover-Bold';
+    font-family: 'Lato', sans-serif;
 }
 
 #home-content {
-    font-family: 'YClover-Bold';
+	font-family: 'Gothic A1', sans-serif;
+    
 }
 
 header {
