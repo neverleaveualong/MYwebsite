@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Change text color in hamburger menu links
             navLinks.forEach(function (link) {
-        	if (window.innerWidth > 768){
-				link.style.color = 'white';
-			} else {
-				link.style.color = 'black';
-			}
+                if (window.innerWidth > 768) {
+                    link.style.color = 'white';
+                } else {
+                    link.style.color = 'black';
+                }
             });
         } else {
             header.style.backgroundColor = 'white';
