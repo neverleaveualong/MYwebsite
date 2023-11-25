@@ -1,9 +1,24 @@
 <style>
 @font-face {
-    font-family: 'JalnanGothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
-    font-weight: normal;
+    font-family: 'YClover-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
+}
+
+.title {
+	font-family: 'YClover-Bold';
+	font-weight: bold;
+	font-size: 30px;
+}
+
+
+#main-header {
+    font-family: 'YClover-Bold';
+}
+
+#home-content {
+	font-family: 'YClover-Bold';
 }
 
 header {
