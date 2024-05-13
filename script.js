@@ -11,11 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
         var header = document.getElementById('main-header');
         var logo = document.querySelector('.logo a');
         var navLinks = document.querySelectorAll('nav a');
+		
+		var header = document.getElementById('main-header');
+    	var searchIcon = document.querySelector('.search-icon');
 
         if (window.scrollY > 50) {
-            header.style.backgroundColor = 'black';
+			searchIcon.style.backgroundImage = "url('icon.png')";
+			
+            searchIcon.style.transition = 'background-image 1s ease-in-out';
+			
+			header.style.backgroundColor = 'black';
             header.style.color = 'white';
             logo.style.color = 'white';
+			
 
             // Change text color in hamburger menu links
             navLinks.forEach(function (link) {
@@ -26,9 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         } else {
+			
+			searchIcon.style.transition = 'none';
+			
+			searchIcon.style.backgroundImage = "url('icon2.png')";
             header.style.backgroundColor = 'white';
             header.style.color = 'black';
             logo.style.color = 'black';
+			
 
             // Change text color in hamburger menu links
             navLinks.forEach(function (link) {
@@ -91,33 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-window.addEventListener('scroll', function () {
-    var header = document.getElementById('main-header');
-    var searchIcon = document.querySelector('.search-icon');
-
-    if (window.scrollY > 50) {
-        header.style.backgroundColor = 'black';
-        searchIcon.style.backgroundImage = "url('icon.png')"; // 스크롤 시 검은색 배경에 맞는 아이콘
-    } else {
-        header.style.backgroundColor = 'white';
-        searchIcon.style.backgroundImage = "url('icon2.png')"; // 초기 흰색 배경에 맞는 아이콘
-    }
-});
-
-let lastKnownScrollPosition = 0;
-let ticking = false;
-
-function doSomething(scrollPos) {
-    var header = document.getElementById('main-header');
-    var searchIcon = document.querySelector('.search-icon');
-    if (scrollPos > 50) {
-        header.style.backgroundColor = 'black';
-        searchIcon.style.backgroundImage = "url('icon.png')";
-    } else {
-        header.style.backgroundColor = 'white';
-        searchIcon.style.backgroundImage = "url('icon2.png')";
-    }
-}
 
 window.addEventListener('scroll', function(e) {
     lastKnownScrollPosition = window.scrollY;
