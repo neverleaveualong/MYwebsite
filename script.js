@@ -1,60 +1,70 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Toggle navigation visibility on hamburger icon click
-    var menuToggle = document.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', function () {
-        var nav = document.querySelector('nav');
-        nav.classList.toggle('show');
-    });
+    const menuToggle = document.querySelector('.menu-toggle');
+    const searchBtn = document.querySelector('.search-btn');
+    const searchInput = document.getElementById('search-input');
+    const header = document.getElementById('main-header');
+    const logo = document.querySelector('.logo a');
+    const navLinks = document.querySelectorAll('nav a');
+    const searchIcon = document.querySelector('.search-icon');
 
-    // Scroll event for changing header style and text color in the hamburger menu
-    window.addEventListener('scroll', function () {
-        var header = document.getElementById('main-header');
-        var logo = document.querySelector('.logo a');
-        var navLinks = document.querySelectorAll('nav a');
-
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = 'black';
-            header.style.color = 'white';
-            logo.style.color = 'white';
-
-            // Change text color in hamburger menu links
-            navLinks.forEach(function (link) {
-                if (window.innerWidth > 768) {
-                    link.style.color = 'white';
-                } else {
-                    link.style.color = 'black';
-                }
-            });
-        } else {
-            header.style.backgroundColor = 'white';
-            header.style.color = 'black';
-            logo.style.color = 'black';
-
-            // Change text color in hamburger menu links
-            navLinks.forEach(function (link) {
-                link.style.color = 'black';
-            });
-        }
-    });
-
-    // Show the home section on page load
-    document.getElementById('home-content').classList.add('show');
-
-    // Navigation link click events
-    var navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(function (link) {
-        link.addEventListener('click', function (event) {
-            var sectionId = link.getAttribute('data-section');
-
-            document.querySelectorAll('.section-content').forEach(function (section) {
-                section.classList.remove('show');
-            });
-
-            document.getElementById(sectionId).classList.add('show');
-
-            // Close the navigation menu on mobile after clicking a link
-            var nav = document.querySelector('nav');
-            nav.classList.remove('show');
+    // 햄버거 메뉴 토글
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function () {
+            const nav = document.querySelector('nav');
+            if (nav) {
+                nav.classList.toggle('show');
+            }
         });
-    });
+    }
+
+    // 검색 기능
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', function () {
+            const query = searchInput.value.toLowerCase().trim();
+            if (query) {
+                const sections = document.querySelectorAll('.section-content');
+                let found = false;
+                sections.forEach(section => {
+                    if (section.textContent.toLowerCase().includes(query) && !found) {
+                        const currentShow = document.querySelector('.section-content.show');
+                        if (currentShow) {
+                            currentShow.classList.remove('show');
+                        }
+                        section.classList.add('show');
+                        window.scrollTo(0, section.offsetTop - header.offsetHeight);
+                        found = true;
+                    }
+                });
+            }
+        });
+
+        searchInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    }
+
+    // 스크롤 이벤트
+    if (header && searchIcon) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'black';
+                logo.style.color = 'white';
+                searchIcon.style.backgroundImage = "url('icon.png')";
+                navLinks.forEach(link => link.style.color = 'white');
+            } else {
+                header.style.backgroundColor = 'white';
+                logo.style.color = 'black';
+                searchIcon.style.backgroundImage = "url('icon2.png')";
+                navLinks.forEach(link => link.style.color = 'black');
+            }
+        });
+    }
+
+    // 초기 섹션 표시
+    const homeContent = document.getElementById('home-content');
+    if (homeContent) {
+        homeContent.classList.add('show');
+    }
 });
