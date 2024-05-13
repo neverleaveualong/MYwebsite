@@ -38,6 +38,27 @@ header {
     margin-right: 20px;
 }
 
+.search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 20px; /* 이 값을 조정하여 검색 박스의 시작점을 오른쪽으로 이동 */
+	margin-right: 20px;
+}
+
+#search-input {
+    width: 150px; /* Decrease width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Give some space between the input and the button */
+}
+
+.search-btn {
+    padding: 4px;
+    background-color: transparent;
+    border: none;
+}
+
 @media (max-width: 768px) {
     /* Existing styles for smaller screens */
 
@@ -70,6 +91,10 @@ header {
         margin: 0;
         color: black; /* Add this line to ensure text color is black */
         text-decoration: none; /* Add this line to remove any underline */
+    }
+	
+	.search-box {
+        margin-left: 10px; /* 작은 화면에서는 더 적은 마진 */
     }
 }
 
@@ -134,11 +159,13 @@ nav a:hover {
 }
 
 .search-icon {
-    font-size: 1.2em;
-    color: white;
-    margin-right: 50px;
+    width: 24px;
+    height: 24px;
+    background-image: url('icon2.png'); /* 초기 아이콘 설정 */
     cursor: pointer;
+    background-size: cover; /* 이미지가 div 크기에 맞게 조절되도록 설정 */
 }
+
 
 .logo a {
     color: black;
