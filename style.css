@@ -73,10 +73,13 @@ header {
         width: 100%;
         background-color: #FFFFFF;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		max-height: 0;
+    	transition: max-height 0.5s ease-in-out;
     }
 
     nav.show {
-        display: flex;
+        max-height: 300px;
     }
 
     .menu-toggle {
@@ -239,8 +242,10 @@ nav a:hover {
 }
 
 #projects-content {
-    text-align: center;
+    text-align: center; /* 모든 텍스트를 좌측으로 정렬 */
+    margin-left: 20px; /* 컨텐츠와 왼쪽 테두리 간의 여백 */
 }
+
 
 #projects-content h2 {
     font-size: 2em;
