@@ -24,8 +24,8 @@ header {
     background-color: #FFFFFF;
     color: black;
     padding: 20px;
-    margin-left: -15px;
     display: flex;
+	margin-left: -15px;
     justify-content: space-between;
     align-items: center;
     transition: background-color 0.3s, color 0.3s; /* 색상 전환 효과를 부드럽게 적용 */
@@ -95,8 +95,18 @@ header {
     }
 	
 	.search-box {
-        margin-left: 10px; /* 작은 화면에서는 더 적은 마진 */
+        margin-left: 20px; /* 작은 화면에서는 더 적은 마진 */
     }
+	
+	#search-input {
+        width: 150px; /* 모바일에서 너비 감소 */
+    }
+	
+	.search-btn {
+        width: 20px; /* 모바일에서 검색 버튼 크기 조정 */
+        height: 20px; /* 필요에 따라 높이도 조정 */
+    }
+	
 }
 
 .logo {
