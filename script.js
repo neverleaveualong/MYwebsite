@@ -11,19 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
         var header = document.getElementById('main-header');
         var logo = document.querySelector('.logo a');
         var navLinks = document.querySelectorAll('nav a');
-		
-		var header = document.getElementById('main-header');
-    	var searchIcon = document.querySelector('.search-icon');
+        var searchIcon = document.querySelector('.search-icon');
 
         if (window.scrollY > 50) {
-			searchIcon.style.backgroundImage = "url('icon.png')";
-			
+            searchIcon.style.backgroundImage = "url('icon.png')";
             searchIcon.style.transition = 'background-image 1s ease-in-out';
-			
-			header.style.backgroundColor = 'black';
+            header.style.backgroundColor = 'black';
             header.style.color = 'white';
             logo.style.color = 'white';
-			
 
             // Change text color in hamburger menu links
             navLinks.forEach(function (link) {
@@ -34,14 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         } else {
-			
-			searchIcon.style.transition = 'none';
-			
-			searchIcon.style.backgroundImage = "url('icon2.png')";
+            searchIcon.style.transition = 'none';
+            searchIcon.style.backgroundImage = "url('icon2.png')";
             header.style.backgroundColor = 'white';
             header.style.color = 'black';
             logo.style.color = 'black';
-			
 
             // Change text color in hamburger menu links
             navLinks.forEach(function (link) {
@@ -70,14 +62,12 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.classList.remove('show');
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    const searchBtn = document.querySelector('.search-btn');
+    const searchIcon = document.querySelector('.search-icon');
     const searchInput = document.getElementById('search-input');
 
-    // Functionality to search and navigate on button click
-    searchBtn.addEventListener('click', function() {
+    // Functionality to search and navigate on icon click
+    searchIcon.addEventListener('click', function() {
         const query = searchInput.value.toLowerCase().trim();
         if (query) {
             const sections = document.querySelectorAll('.section-content');
@@ -86,34 +76,20 @@ document.addEventListener('DOMContentLoaded', function () {
             sections.forEach(section => {
                 if (section.textContent.toLowerCase().includes(query)) {
                     if (!found) { // Ensure we navigate to the first match
-                        document.querySelector('.section-content.show').classList.remove('show');
                         section.classList.add('show');
-                        window.scrollTo(0, section.offsetTop - document.querySelector('header').offsetHeight);
+                        window.scrollTo(0, section.offsetTop);
                         found = true;
+                    } else {
+                        section.classList.remove('show');
                     }
+                } else {
+                    section.classList.remove('show');
                 }
             });
+
+            if (!found) {
+                alert('No matching content found.');
+            }
         }
     });
-
-    // Optionally, add enter key search activation
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            searchBtn.click(); // Trigger search button click on enter key press
-        }
-    });
-});
-
-
-window.addEventListener('scroll', function(e) {
-    lastKnownScrollPosition = window.scrollY;
-
-    if (!ticking) {
-        window.requestAnimationFrame(function() {
-            doSomething(lastKnownScrollPosition);
-            ticking = false;
-        });
-
-        ticking = true;
-    }
 });
