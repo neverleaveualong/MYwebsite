@@ -6,11 +6,11 @@
     font-size: 30px;
 }
 
-#main-header {
-    font-family: 'Gothic A1', sans-serif;
+#main-header, #projects-content, #publications-content, #activities-content{
+    font-family: 'Lato', sans-serif;
 }
 
-#home-content, #projects-content, #publications-content, #activities-content {
+#home-content {
 	font-family: 'Gothic A1', sans-serif;
     
 }
