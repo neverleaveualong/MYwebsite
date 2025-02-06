@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var searchIcon = document.querySelector('.search-icon');
 
         if (window.scrollY > 50) {
-            searchIcon.style.backgroundImage = "url('icon.png')";
+            searchIcon.style.backgroundImage = "url('./../img/icon.png')";
             searchIcon.style.transition = 'background-image 1s ease-in-out';
             header.style.backgroundColor = 'black';
             header.style.color = 'white';
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else {
             searchIcon.style.transition = 'none';
-            searchIcon.style.backgroundImage = "url('icon2.png')";
+            searchIcon.style.backgroundImage = "url('./../img/icon2.png')";
             header.style.backgroundColor = 'white';
             header.style.color = 'black';
             logo.style.color = 'black';
